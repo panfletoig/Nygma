@@ -5,7 +5,8 @@ var parar = false;
 var azar = 0;
 var columnas = 14;
 var comparar = "";
-var respuesta = ""
+var respuesta = "";
+var points = 0;
 console.log("")
 
 //Lee el documento excel
@@ -33,14 +34,30 @@ readXlsxFile('../exel/uh.xlsx')
         //pones tu respuesta
         //pondre opciones*******
         comparar = prompt("Tu respuesta => ")
+        console.log("")
         
+        if(respuesta == comparar)
+        {
+            points++;
+        }
+        console.log(points)
+        console.log("")
+
         //falta comparar*******
-        parar = true;
+        if(points == 5)
+        {
+            parar = true;
+        }
     }
 })
 
 function aleatorio()
 {
-    azar = (columnas*(Math.random()));
-    azar = azar.toFixed();
+        azar = (columnas*(Math.random()));
+        azar = azar.toFixed();
+        
+        if(azar == 0)
+        {
+            azar = 1;
+        }
 }
