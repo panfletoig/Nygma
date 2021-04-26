@@ -3,7 +3,7 @@ const prompt = require('prompt-sync')();
 
 var parar = false;
 var azar = 0;
-var columnas = 14;
+var columnas = 50;
 var comparar = "";
 var respuesta = "";
 var points = 0;
